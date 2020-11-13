@@ -65,8 +65,6 @@ resource "twcc_loadbalancer" "lb1" {
 
 The following arguments are supported:
 
-* `` - (Required) The load balancing algorithm of the loadbalancer. Valid values: `ROUND_ROBIN`, `LEAST_CONNECTIONS`, `SOURCE_IP`.
-
 * `name` - (Required) The name of the loadbalancer.
 
 * `platform` - (Required) The name of the platform where loadbalancer is.

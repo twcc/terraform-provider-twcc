@@ -4,7 +4,7 @@ data "twcc_project" "testProject" {
 }
 
 data "twcc_solution" "solution" {
-    name = "ubuntu"
+    name = "Ubuntu"
     project = data.twcc_project.testProject.id
 }
 

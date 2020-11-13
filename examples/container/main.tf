@@ -3,6 +3,11 @@ data "twcc_project" "testProject" {
     platform = "k8s-taichung-default"
 }
 
+data "twcc_solution" "solution" {
+    name = "TensorFlow"
+    project = data.twcc_project.testProject.id
+}
+
 resource "twcc_container" "container1" {
     extra_property = {
         flavor = "1 GPU + 04 cores + 090GB memory"
@@ -15,5 +20,5 @@ resource "twcc_container" "container1" {
     name = "geminitestcontainer1"
     platform = data.twcc_project.testProject.platform
     project = data.twcc_project.testProject.id
-    solution = "4"
+    solution = data.twcc_solution.solution.id
 }
