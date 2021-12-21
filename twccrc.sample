@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+
+export APIGW_URL=https://apigateway.tmpstg.twcc.tw/
+export TWCC_APIKEY="7169ade9-c5b8-4765-95ea-41c8b9998877"
